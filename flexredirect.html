@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<div id="amazon-root"></div>
+	<script type="text/javascript">
+		const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          console.log("Redirect: ");
+          console.log(urlParams);
+          const redirect_uri = urlParams.get('redirect_uri')
+          const code = urlParams.get('code')
+          window.location.href=redirect_uri+'&code='+code;
+	</script>
+</body>
+
+</html>

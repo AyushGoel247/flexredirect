@@ -9,11 +9,14 @@
 	<div id="amazon-root"></div>
 	<script type="text/javascript">
 		const queryString = window.location.search;
+        console.log("queryString: " + queryString);
           const urlParams = new URLSearchParams(queryString);
           console.log("Redirect: ");
           console.log(urlParams);
           const redirect_uri = urlParams.get('redirect_uri')
+          console.log("redirect_uri: " + redirect_uri);
           const code = urlParams.get('code')
+          console.log("code: " + code);
           window.location.href=redirect_uri+'&code='+code;
 	</script>
 </body>
